@@ -10,7 +10,7 @@ router.register(r'userdrug', views.UserDrugViewSet)
 router.register(r'drugusage', views.DrugUsageViewSet)
 
 urlpatterns = [
-    path('', include(router.url)),
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

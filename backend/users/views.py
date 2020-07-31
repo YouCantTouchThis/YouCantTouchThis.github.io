@@ -16,14 +16,14 @@ from .models import (
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticatoin]
+    permission_classes = [permissions.IsAuthenticated]
 
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all().order_by('-rehab_start')
     serializer_class = ProfileSerializer
     premission_classes = [permissions.IsAuthenticated]
 
-class DrugUsageViewset(viewsets.ModelViewSet):
+class DrugUsageViewSet(viewsets.ModelViewSet):
     queryset = DrugUsage.objects.all().order_by('-date_taken')
     serializer_class = DrugUsageSerializer
     permission_classes = [permissions.IsAuthenticated]
