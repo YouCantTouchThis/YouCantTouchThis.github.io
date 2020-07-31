@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Profile, UserDrug, DrugUsage
 
-# Register your models here.
+admin.site.register(Profile)
+admin.site.register(UserDrug)
+admin.site.register(DrugUsage)
