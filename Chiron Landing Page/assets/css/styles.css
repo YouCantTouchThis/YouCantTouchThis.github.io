@@ -1,0 +1,54 @@
+html {
+  height: 70%;
+}
+
+.features-clean {
+  background-color: rgb(33,33,33);
+}
+
+.header-dark {
+  height: 744px;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 20px;
+}
+
+.navbar-dark .navbar-brand {
+  font-size: 26px;
+}
+
+.h1, h1 {
+}
+
+.h1, h1 {
+  color: white;
+  text-align: center;
+  font: 'Bitter', serif;
+  font-family: 'Bitter', serif;
+}
+
+.text-center {
+  font-size: 30px;
+}
+
+.text-center {
+}
+
+.text-center.amaing {
+  position: relative;
+  top: 77px;
+}
+
+.h1, h1 {
+}
+
+.h1, h1 {
+  position: relative;
+  top: 76px;
+}
+

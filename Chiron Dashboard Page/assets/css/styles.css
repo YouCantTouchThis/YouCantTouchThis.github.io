@@ -1,0 +1,99 @@
+.navbar.navbar-dark.navbar-expand-lg.navigation-clean-search {
+  color: black;
+  background-color: #232729;
+  height: 76px;
+}
+
+.navbar-dark .navbar-brand {
+  color: rgb(255,255,255);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(255,255,255);
+}
+
+.btn:not(:disabled):not(.disabled) {
+  background: #208f8f;
+  border-radius: 20px;
+  font-size: inherit;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+  text-shadow: none;
+  padding: .5rem .8rem;
+  transition: background-color 0.25s;
+}
+
+.navbar-dark .navbar-text a {
+  position: relative;
+  left: -10px;
+}
+
+.calculator {
+  position: relative;
+  top: 69px;
+  left: 41%;
+}
+
+.h1, h1 {
+  position: relative;
+  text-align: center;
+  top: 15px;
+}
+
+.amaing {
+  position: relative;
+  width: 80%;
+  /*margin-left: auto;*/
+  left: 9%;
+  background-color: rgb(224,222,222);
+  height: 220px;
+  top: 49px;
+  /*margin-right: auto;*/
+}
+
+.h1, h1 {
+  position: relative;
+  top: 28px;
+  color: rgb(0,0,0);
+}
+
+.amazing {
+  position: relative;
+  top: -5px;
+}
+
+#wrapper {
+}
+
+.wowo {
+  position: relative;
+  top: 32px;
+}
+
+#wrapper {
+  position: relative;
+  top: -21px;
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+}
+
+.btn:not(:disabled):not(.disabled) {
+}
+
+.amazingfgdf {
+  position: relative;
+  /*left: 19%;*/
+  height: 61px;
+  top: 78px;
+  margin-left: auto;
+}
+
+.wowow {
+  position: relative;
+  /*left: 57%;*/
+  top: 78px;
+  margin-left: auto;
+  height: 61px;
+}
+
