@@ -37,7 +37,13 @@ class DrugUsage(models.Model):
     date_taken = models.DateTimeField(auto_now=True)
     advised = models.BooleanField()
     
-    
+class Checkup(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    heart_rate = models.PositiveSmallIntegerField()
+    sober = models.BooleanField()
+    date = models.DateTimeField(auto_now=True)
+
+
 
 
 

@@ -10,8 +10,9 @@ router.register(r'userdrug', views.UserDrugViewSet)
 router.register(r'drugusage', views.DrugUsageViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('checkhigh/', views.HighFromImage.as_view(), name='checkhigh'),
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include(router.urls)),
 ]
 
