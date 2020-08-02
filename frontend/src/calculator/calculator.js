@@ -12,7 +12,7 @@ class Calculator extends React.Component {
 
     handleClick() {
         this.setState(state => ({
-            output: `${calc('localhost:8000/user/1')}`
+            output: `${calc('localhost:8000/users/1/')}`
         }));
     }
 

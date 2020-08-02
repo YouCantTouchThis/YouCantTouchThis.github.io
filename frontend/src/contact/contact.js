@@ -28,7 +28,7 @@ function Contact() {
                     <div class="box" style="background-image: url('assets/img/47196768_1586633688533212_r.jpg');">
                         <div class="cover">
                             <h3 class="name">Gaurish Lakhanpal</h3>
-                            <p class="title">WEb Developer</p>
+                            <p class="title">Web Developer</p>
                             <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                         </div>
                     </div>
