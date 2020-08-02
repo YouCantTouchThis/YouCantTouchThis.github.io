@@ -198,3 +198,6 @@ a:hover {
 .navbar-dark .navbar-brand {
 }
 
+.btn:not(:disabled):not(.disabled) {
+}
+
