@@ -1,5 +1,9 @@
 import React from 'react';
-
+import './assets/bootstrap/css/bootstrap.min.css';
+import './assets/css/Contact-Form-Clean.css';
+import './assets/css/Contact-form-simple.css';
+import './assets/css/ebs-contact-form-1.css';
+import './assets/css/Team-Grid.css';
 import { Link } from 'react-router-dom';
 
 function Contact() {

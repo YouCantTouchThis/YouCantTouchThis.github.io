@@ -1,5 +1,8 @@
 import React from 'react';
-
+import './assets/bootstrap/css/bootstrap.min.css';
+import './assets/css/styles.css';
+import './assets/css/TD-BS4-Simple-Contact-Form-1.css';
+import './assets/css/TD-BS4-Simple-Contact-Form.css';
 import { Link } from 'react-router-dom';
 import calc from '../services/http';
 

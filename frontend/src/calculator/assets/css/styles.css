@@ -1,0 +1,80 @@
+.navbar.navbar-dark.navbar-expand-lg.navigation-clean-search {
+  color: black;
+  background-color: #232729;
+  height: 76px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.nav-link {
+}
+
+.nav-link, .nav-link:hover {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+}
+
+.btn.btn-light.action-button.wowo {
+}
+
+.btn.btn-light.action-button.wowo {
+  background: #208f8f;
+  border-radius: 20px;
+  font-size: inherit;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+  text-shadow: none;
+  padding: .5rem .8rem;
+  transition: background-color 0.25s;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  width: 100%;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  width: 100%;
+}
+
+.btn.btn-light.action-button.wowo {
+  width: 11%;
+}
+
+body {
+  background-color: rgb(169,169,169);
+}
+
+.col.td-glass {
+  width: 82%;
+}
+
+.td-form {
+  width: 79%;
+  /*height: 11%;*/
+}
+
+.row.td-form-wrapper {
+  height: 392px;
+}
+
+.td-form-wrapper {
+  height: 350px;
+}
+
+.btn:not(:disabled):not(.disabled) {
+}
+
+.btn.btn-primary.dropdown-toggle.yeyeye {
+  position: relative;
+  top: 30px;
+}
+
