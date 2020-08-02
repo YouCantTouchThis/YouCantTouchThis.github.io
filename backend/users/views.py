@@ -8,11 +8,13 @@ from .serializers import (
     ProfileSerializer,
     DrugUsageSerializer,
     UserDrugSerializer,
+    CheckupSerializer,
 )
 from .models import (
     Profile,
     UserDrug,
     DrugUsage,
+    Checkup,
 )
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -40,3 +42,8 @@ class HighFromImage(APIView):
 
     def get(self, request, format=None):
         return Response("WIP")
+
+class CheckupViewSet(viewsets.ModelViewSet):
+    queryset = Checkup.objects.all().order_by('-date')
+    serializer_class = CheckupSerializer
+    permission_classes = [permissions.IsAuthenticated]

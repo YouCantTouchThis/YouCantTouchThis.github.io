@@ -8,6 +8,7 @@ router.register(r'users', views.UserViewSet)
 router.register(r'profile', views.ProfileViewSet)
 router.register(r'userdrug', views.UserDrugViewSet)
 router.register(r'drugusage', views.DrugUsageViewSet)
+router.register(r'checkup', views.CheckupViewSet)
 
 urlpatterns = [
     path('checkhigh/', views.HighFromImage.as_view(), name='checkhigh'),

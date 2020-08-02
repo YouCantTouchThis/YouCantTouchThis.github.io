@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from .models import Profile, UserDrug, DrugUsage
+from .models import Profile, UserDrug, DrugUsage, Checkup
 from rest_framework import serializers
 
 # Commented code, this must be impossible????
@@ -24,7 +24,10 @@ class UserDrugSerializer(serializers.HyperlinkedModelSerializer):
         model = ['user', 'drug', 'startDate']
         
 
-
+class CheckupSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Checkup
+        model = ['user', 'heartrate', 'sober', 'date']
 
 
 
