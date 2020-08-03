@@ -7,7 +7,10 @@ import time
 #import json
 
 
-image = cv2.imread("high.jpg")
+
+
+image = cv2.imread("images/eye.png")
+
 #video = cv2.VideoCapture("gateC.mp4")
 #video = cv2.VideoCapture("gateB.mp4")
 #video = cv2.VideoCapture(0)
@@ -21,7 +24,9 @@ i = 0
 area_threshold = 0.01
 croppedPixels = 150
 
-image = cv2.GaussianBlur(image, (5, 5), 0 )
+
+image = cv2.GaussianBlur(image, (5, 5), 0)
+
 hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
 mask0 = cv2.inRange(hsv,(0, 10, 10), (25, 255, 255) )
