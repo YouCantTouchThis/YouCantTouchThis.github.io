@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-BACKEND_URL = 'http://127.0.0.1:8000'
+const BACKEND_URL = 'http://127.0.0.1:8000'
 
 export async function DrugUsages(user) {
     return await axios.get(`${BACKEND_URL}/drugusage/`, {
@@ -11,7 +11,7 @@ export async function DrugUsages(user) {
 }
 
 export async function timeTillNextDrugUse(drugUsages) {
-    timeSinceLast = (
+    let timeSinceLast = (
         Date.now() - new Date(drugUsages[drugUsages.length-1]).getTime()
     );
 
@@ -26,15 +26,15 @@ export async function offences(user) {
 }
 
 export async function checkupDoneToday(user) {
-    checkups = await axios.get(`${BACKEND_URL}/checkup/`, {
+    let checkups = await axios.get(`${BACKEND_URL}/checkup/`, {
         user: user
     });
-    latest = checkups[checkups.length-1];
-    date = new Date(latest.data.date);
-    return (new Date(Date.now()).getDate() == date.getDate());
+    let latest = checkups[checkups.length-1];
+    let date = new Date(latest.data.date);
+    return (new Date(Date.now()).getDate() === date.getDate());
 }
 
 export async function calc(user) {
-    profile = await axios.get(user).data;
+    let profile = await axios.get(user).data;
     return 2;
 }

@@ -4,55 +4,66 @@ import './assets/css/styles.css';
 import './assets/css/TD-BS4-Simple-Contact-Form-1.css';
 import './assets/css/TD-BS4-Simple-Contact-Form.css';
 import { Link } from 'react-router-dom';
-import calc from '../services/http';
+import { calc } from '../services/http';
 
-class Calculator extends React.Component {
-    contructor() {
+export default class Calculator extends React.Component {
+    
+    constructor(props) {
+        super(props);
         this.state = {output: '?'};
-
         this.handleClick = this.handleClick.bind(this);
+        this.render = this.render.bind(this);
+    }
+
+    componentDidMount() {
+        this.state = {output: '?'};
     }
 
     handleClick() {
-        this.setState(state => ({
-            output: `${calc('localhost:8000/users/1/')}`
-        }));
+        // this.setState({
+        //     output: `${calc('localhost:8000/users/1/')}`
+        // });
+        this.setState({
+            output: '3 Grams'
+        });
     }
 
     render() {
         return (
-    <div>
-    <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-        <div class="container"><a class="navbar-brand" href="#">C H I R O N</a><a class="nav-link" href="#">Calculator</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact</a></li>
-                </ul><a href="#"></a>
-                <form class="form-inline mr-auto" target="_self">
-                    <div class="form-group"><label for="search-field"></label></div>
-                </form><span class="navbar-text"></span><a class="btn btn-light action-button wowo" role="button" href="#">Signout</a></div>
-        </div>
-    </nav>
-    <section class="td-form">
-        <div class="row td-form-wrapper">
-            <div class="col td-glass">
-                <form class="td-form-wrapper">
-                    <h1 class="text-center">Calculate Dosage</h1>
-                    <div class="form-group">
-                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle yeyeye" data-toggle="dropdown" aria-expanded="false" type="button">Select a Drug</button>
-                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Cocaine</a><a class="dropdown-item" role="presentation" href="#">Heroin</a><a class="dropdown-item" role="presentation" href="#">MDMA(Ecstacy)</a></div>
-                        </div>
+            <div>
+            <nav className="navbar navbar-dark navbar-expand-lg navigation-clean-search">
+                <div className="container"><Link to="/dashboard"><div className="navbar-brand"></div>C H I R O N</Link><Link to="/calculator"><div className="nav-link" href="#">Calculator</div></Link><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
+                    <div
+                        className="collapse navbar-collapse" id="navcol-1">
+                        <ul className="nav navbar-nav">
+                            <li className="nav-item" role="presentation">
+                            <Link to="/contact"><div className="nav-link">Contact</div></Link>
+                            </li>
+                        </ul><div></div>
+                        <form className="form-inline mr-auto" target="_self">
+                            <div className="form-group"><label for="search-field"></label></div>
+                        </form><span className="navbar-text"></span><Link to='/'><div className="btn btn-light action-button wowo" role="button" href="#">Signout</div></Link></div>
+                </div>
+            </nav>
+            <section className="td-form">
+                <div className="row td-form-wrapper">
+                    <div className="col td-glass">
+                        <form className="td-form-wrapper">
+                            <h1 className="text-center">Calculate Dosage</h1>
+                            <div className="form-group">
+                                <div className="dropdown"><button className="btn btn-primary dropdown-toggle yeyeye" data-toggle="dropdown" aria-expanded="false" type="button">Select a Drug</button>
+                                    <div className="dropdown-menu" role="menu"><div className="dropdown-item" role="presentation" >Cocaine</div><a className="dropdown-item" role="presentation" >Heroin</a><a className="dropdown-item" role="presentation" >MDMA(Ecstacy)</a></div>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-md-12"><button className="btn btn-dark float-right" type="submit" onClick={()=>this.handleClick()}>Calculate</button></div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <div class="col-md-12"><button class="btn btn-dark float-right" type="submit">Calculate</button></div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-    <p>{this.state.output}</p>
-    </div>   
+                </div>
+            </section>
+            <p>{this.state.output}</p>
+            </div>   
         )
     }
 }

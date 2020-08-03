@@ -6,11 +6,12 @@ import './assets/css/ebs-contact-form-1.css';
 import './assets/css/Team-Grid.css';
 import { Link } from 'react-router-dom';
 
-function Contact() {
+export default function Contact() {
     return (
     <div>
     <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-        <div class="container"><a class="navbar-brand" href="#">C H I R O N</a><a class="nav-link" href="#">Calculator</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-4"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><Link to="/dashboard"><a class="navbar-brand" href="#">C H I R O N</a></Link>
+        <Link to="/calculator"><a class="nav-link" href="#">Calculator</a></Link><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-4"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-4">
                 <ul class="nav navbar-nav">
@@ -18,7 +19,7 @@ function Contact() {
                 </ul><a href="#"></a>
                 <form class="form-inline mr-auto" target="_self">
                     <div class="form-group"><label for="search-field"></label></div>
-                </form><span class="navbar-text"></span><a class="btn btn-light action-button wowo" role="button" href="#">Signout</a></div>
+                </form><span class="navbar-text"></span><Link to="/"><a class="btn btn-light action-button wowo" role="button" href="#">Signout</a></Link></div>
         </div>
     </nav>
     <div class="team-grid">

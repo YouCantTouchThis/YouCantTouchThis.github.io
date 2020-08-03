@@ -7,11 +7,11 @@ import './assets/css/styles.css';
 import { Link } from 'react-router-dom';
 import { timeTillNextDrugUse, DrugUsages, offences, checkupDoneToday } from '../services/http';
 
-class Dashboard extends React.Component {
-    contructor(props) {
-        super(props);
+export default class Dashboard extends React.Component {
+    constructor() {
+
         let drugs;
-        let du;
+        let du = 0;
         DrugUsages('localhost:8000/users/1/').then((i) => {
             drugs=i;
             timeTillNextDrugUse(i).then((j) => {
@@ -19,15 +19,16 @@ class Dashboard extends React.Component {
             });
         });
 
-        this.state = {
+        this.setState({
             drugsNA: offences('localhost:8000/users/1/'),
             drugs: drugs,
+            du: du,
             days: Math.floor(du/1000/60/60/24),
             hours: Math.floor(du/1000/60/60%24),
             minutes: Math.floor(du/1000/60%24),
             seconds: Math.floor(du/1000%60),
             checkup: checkupDoneToday('localhost:8000/users/1') ? 'Yes' : 'No',
-        }
+        });
     }
 
     componentDidMount() {
@@ -45,10 +46,11 @@ class Dashboard extends React.Component {
         this.setState({
             drugsNA: this.state.drugsNA,
             drugs: this.state.drugs,
-            days: Math.floor(du/1000/60/60/24),
-            hours: Math.floor(du/1000/60/60%24),
-            minutes: Math.floor(du/1000/60%24),
-            seconds: Math.floor(du/1000%60),
+            du: this.state.du,
+            days: Math.floor(this.state.du/1000/60/60/24),
+            hours: Math.floor(this.state.du/1000/60/60%24),
+            minutes: Math.floor(this.state.du/1000/60%24),
+            seconds: Math.floor(this.state.du/1000%60),
             checkup: this.state.checkup,
         });
     }
@@ -57,15 +59,15 @@ class Dashboard extends React.Component {
         return (
             <div>
             <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-                <div class="container"><a class="navbar-brand" href="#">C H I R O N</a><a class="nav-link" href="#">Calculator</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="container"><Link to="/dashboard"><a class="navbar-brand" href="#">C H I R O N</a></Link><Link to="/calculator"><a class="nav-link" href="#">Calculator</a></Link><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                     <div
                         class="collapse navbar-collapse" id="navcol-1">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact</a></li>
+                            <li class="nav-item" role="presentation"><Link to="/contact"><a class="nav-link" href="#">Contact</a></Link></li>
                         </ul><a href="#"></a>
                         <form class="form-inline mr-auto" target="_self">
                             <div class="form-group"><label for="search-field"></label></div>
-                        </form><span class="navbar-text"></span><a class="btn btn-light action-button wowo" role="button" href="#">Signout</a></div>
+                        </form><span class="navbar-text"></span><Link to="/"><a class="btn btn-light action-button wowo" role="button" href="#">Signout</a></Link></div>
                 </div>
             </nav>
             <h1>Dashboard</h1>
